@@ -1,0 +1,119 @@
+﻿Issue key,Issue Type,Summary,Status,Description,Parent key,Parent summary
+GCP-1,Epic,Partner Referral Intake ,To Do,Enable partner staff to submit complete digital participant referrals and notify Grad Careers when a new referral is received. ,,
+GCP-4,Epic,Cohort Scheduling,To Do,,,
+GCP-5,Epic,Attendance & Outcome Tracking,To Do,,,
+GCP-7,Story,Submit a participant referral,To Do,"As a partner referral officer, I want to submit a participant referral online so that Grad Careers can process it.
+
+*MoSCoW priority:* Must have
+
+*Linked requirements:* FR-01 and FR-02—record creation only. Notification is covered by GCP-3.
+
+*Acceptance criteria:* Given all mandatory fields contain valid information, when the officer submits the referral, then the system creates a referral record containing the submitted information.
+
+Given one or more mandatory fields are empty, when the officer attempts to submit the referral, then the system identifies each missing field, blocks submission, and creates no referral record.",GCP-1,Partner Referral Intake 
+GCP-3,Story,Notify Grad Careers of a new referral.,To Do,"As a Grad Careers enrolment officer, I want to be notified when a complete referral is received so that I can review it and process the participant’s enrolment.
+
+*MoSCoW priority:* Should have
+
+*Linked requirements:* FR-02
+
+*Acceptance criteria:* Given a complete referral record has been successfully created, when the system processes the new referral notification, then it notifies the designated Grad Careers enrolment officer and identifies the referral to review.
+
+Given an incomplete referral submission is blocked and no referral record is created, when the submission attempt ends, then no new-referral notification is sent.",GCP-1,Partner Referral Intake 
+GCP-2,Story, Automatically allocate participants to cohorts,To Do,"As a Grad Careers enrolment officer, I want the system to automatically allocate enrolled participants to cohorts using their three ranked preferences so that routine allocation does not require manual processing.
+
+*MoSCoW priority:* Should have
+
+*Linked requirements:* FR-03.
+
+*Acceptance criteria:* Given an enrolled participant has recorded three ranked cohort preferences, when automatic allocation runs, then the system assigns the participant to the highest-ranked preferred cohort with an available place and saves the allocation.
+
+Given the first preferred cohort is full, when automatic allocation runs, then the system checks the second preference followed by the third and assigns the participant to the first preferred cohort with an available place.
+
+Given all three preferred cohorts are full, when automatic allocation runs, then the system leaves the participant unallocated and flags their record for the enrolment officer to arrange an alternative cohort manually",GCP-4,Cohort Scheduling
+GCP-8,Story,Participant reminder notification,To Do,"As a participant, I want to receive an automatic reminder one day before my scheduled workshop so that I can plan to attend.
+
+*MoSCoW priority:* Should have
+
+
+*Linked requirements:* FR-04.
+
+
+Acceptance criteria: Given a participant is allocated to a cohort with a scheduled workshop and has valid recorded contact details, when the reminder time one day before the workshop is reached, then the system sends a reminder through the agreed contact channel containing the workshop date, time, and location or joining details.",GCP-4,Cohort Scheduling
+GCP-9,Epic,Partner Reporting,To Do,,,
+GCP-16,Story,Manually allocate a participant when automatic allocation cannot proceed,To Do,"As a Grad Careers enrolment officer, I want to manually allocate participants when automatic allocation cannot proceed so that they can join a suitable cohort.
+
+*MoSCoW priority:* Must have
+
+*Linked requirements:* FR-03—proposed manual-allocation exception.
+
+*Acceptance criteria:* Given a participant remains unallocated because automatic allocation is deferred or unavailable, all three preferred cohorts are full, or their preferences are missing, and a suitable cohort has been agreed with them, when the enrolment officer selects that cohort with an available place and saves the allocation, then the system records the cohort allocation against the participant’s digital record.
+
+Given the selected cohort has no available places, when the officer attempts to save the allocation, then the system blocks it and informs the officer that the cohort is full.",GCP-4,Cohort Scheduling
+GCP-10,Story,Record participant attendance,To Do,"As a workshop trainer, I want to record attendance online for participants in my assigned cohort so that attendance is stored against their digital records.
+
+*MoSCoW priority:* Must have
+
+*Linked requirements:* FR-05.
+
+*Acceptance criteria:* Given the trainer has selected their assigned cohort and the workshop session, when they mark a participant’s attendance and save it, then the system stores the attendance status against that participant’s digital record for that session.
+
+Given attendance has been saved, when the trainer reopens the same workshop session, then the system displays the saved attendance status.",GCP-5,Attendance & Outcome Tracking
+GCP-11,Story,Record workshop completion status,To Do,"
+
+ As a workshop trainer, I want to record a participant’s workshop completion status so that Grad Careers can track who completed the workshop.
+
+*MoSCoW priority:* Must have
+
+*Linked requirements:* FR-06—completion-status recording only. Outcomes will be covered by a separate story.
+
+*Acceptance criteria:* Given the trainer has selected a participant’s digital record and the relevant workshop, when they enter a completion status and save it, then the system stores that status against the participant’s record for that workshop",GCP-5,Attendance & Outcome Tracking
+GCP-12,Story,Record follow-up attempts and actions,To Do,"As a Grad Careers enrolment officer, I want to record contact attempts and follow-up actions so that staff can see previous contact and know what needs to happen next.
+
+*MoSCoW priority:* Should have
+
+*Linked requirements:* FR-07—follow-up recording only. Non-completion reasons are covered by GCP-17.
+
+*Acceptance criteria:* Given the officer has selected a participant’s digital record, when they enter the contact date, method, result, and next action and save them, then the system stores the follow-up entry against that participant’s record.
+
+Given the participant does not respond, when the officer saves the unsuccessful contact attempt and planned next action, then the system records both without changing any previously recorded non-completion reason.",GCP-5,Attendance & Outcome Tracking
+GCP-17,Story,Record non-completion reasons,To Do,"
+
+ As a Grad Careers enrolment officer, I want to record a participant’s reported non-completion reason so that Grad Careers can understand why participants leave workshops.
+
+*MoSCoW priority:* Should have
+
+*Linked requirements:* FR-07—non-completion reason only.
+
+*Acceptance criteria:* Given a participant is recorded as not completing a workshop and has provided a reason, when the officer enters that reason and saves it, then the system stores it against the participant’s digital record for that workshop.
+
+Given no reason has been obtained, when the officer saves the record, then the system identifies the reason as unknown rather than assuming one.",GCP-5,Attendance & Outcome Tracking
+GCP-15,Story,Record participant outcome,To Do,"As a Grad Careers enrolment officer, I want to record participant outcomes against their unique digital records so that Grad Careers can track program results and identify further support needs.
+
+*MoSCoW priority:* Must have
+
+*Linked requirements:* FR-06—outcome recording only. Workshop completion status is covered by GCP-11.
+
+*Acceptance criteria:* Given the officer has selected a participant’s digital record, when they enter the participant’s outcome and save it, then the system stores the outcome against that participant’s unique ID.
+
+Given an outcome has been saved, when the officer reopens the participant’s profile, then the system displays the saved outcome.",GCP-5,Attendance & Outcome Tracking
+GCP-13,Story,Generate partner outcome report,To Do,"As a Grad Careers enrolment officer, I want to generate a partner report from recorded completion and non-completion outcomes so that I can provide the partner with an accurate summary of participant results.
+
+*MoSCoW priority:* Must have
+
+*Linked requirements:* FR-08.
+
+*Acceptance criteria:* Given workshop completion or non-completion statuses are recorded for a partner’s participants, when the enrolment officer selects that partner and generates a report, then the system creates a report containing those statuses and any recorded participant outcomes, such as employment or further study, where available.
+
+Given participants belong to different partner organisations, when the officer generates a report for one partner, then the report excludes participants belonging to other partners.",GCP-9,Partner Reporting
+GCP-14,Story,Automatically share updated partner reports,To Do,"
+
+As a Grad Careers enrolment officer, I want updated reports to be automatically shared with the relevant partner organisation after new outcomes are recorded so that partners receive current results without manual sending.
+
+*MoSCoW priority:* Should have
+
+*Linked requirements:*  FR-09.
+
+*Acceptance criteria:* Given a participant’s digital record is linked to a partner organisation, when a new completion or non-completion outcome is saved, then the system generates the updated partner report and automatically shares it with that partner’s authorised recipients.
+
+Given the updated report is shared, when its contents are checked, then it contains only participant records that the receiving partner is authorised to access.",GCP-9,Partner Reporting
