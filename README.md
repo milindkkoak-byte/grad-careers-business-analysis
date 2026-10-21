@@ -31,3 +31,10 @@ Power BI, Excel, Jira, process mapping, gap analysis, requirements documentation
 - Higher observed results in the mentor group do not establish causation; assignment and baseline comparability require confirmation.
 - Proposed process improvements have not been implemented or measured.
 
+## Explore the projects
+
+1. [Process Analysis and Requirements](01-process-and-requirements/)
+2. [Power BI Reporting](02-power-bi-reporting/)
+3. [User Stories and Prioritisation](03-user-stories-and-prioritisation/)
+4. [Financial Forecasting](04-financial-forecasting/)
+5. [Mentor Pilot Evaluation](05-mentor-pilot-evaluation/)
